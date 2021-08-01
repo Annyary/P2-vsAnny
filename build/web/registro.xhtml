@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body >
+        <p:panel header="Registro" style="width:1000px" >
+            <p:growl id="mensajes" showDetail="true" life="5000" />
+            <h:panelGrid columns="2" cellpadding="8" />
+                <h:form id="formRegistro" >
+
+                    <p>Cédula:<h:inputText id="cedulaId" value="#{loginController.usuario.id}" required="true"/></p>
+                    
+                    <p>Nombre:<h:inputText id="nombreId" value="#{loginController.usuario.nombre}" required="true"/></p>
+
+                    <p>Primer apellido:<h:inputText id="apellido1Id" value="#{loginController.usuario.primerApellido}" required="true"/></p>
+
+                    <p>Segundo apellido:<h:inputText id="apellido2Id" value="#{loginController.usuario.segundoApellido}" required="true"/></p>
+
+                    <p>Fecha de nacimiento:<h:inputText id="fechaId" value="#{loginController.usuario.fechaNacimiento}" required="true"/></p>
+                    
+                    <p>Correo:<h:inputText id="correoId" value="#{loginController.usuario.correo}" required="true"/></p>
+
+                    <p>Ingrese su contraseña:<h:inputSecret id="claveId" value="#{loginController.usuario.contrasenna}" required="true"/></p>
+                    
+                    <br></br>
+                    
+                    <p><h:commandButton id="registroButton" value ="Registrarse"  actionListener="#{loginController.registrar()}" action="REGISTRADO" ></h:commandButton></p>
+
+                </h:form>
+           
+            
+        </p:panel>
+    </h:body>
+</html>
+

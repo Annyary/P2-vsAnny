@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Bienvenido al sistema</title>
+    </h:head>
+    <h:body style="text-align:center" >
+
+        <p:growl id="mensajes" showDetail="true" life="5000" />
+        <h:form>
+            <p:panel header="Login" style="width:400px">
+                <h:panelGrid columns="2" cellpadding="6">
+                    <h:outputLabel for="username" value="Usuario:" />
+                    <p:inputText value="#{loginController.usuario.correo}" id="username" required="true" label="username" requiredMessage="El usuario es requerido..." />
+                    <h:outputLabel for="password" value="Clave:" />
+                    <p:password value="#{loginController.usuario.contrasenna}" id="password" required="true"  label="password" />
+                    <f:facet name="footer">
+                        <p:commandButton id="loginButton" value="Login"
+                                         actionListener="#{loginController.login}" update=":mensajes"
+                                         oncomplete="manejarLogin(xhr, status, args)" />
+                        <br></br>
+                        ¿Aún no tienes una cuenta?
+                        <p:link outcome="registro.xhtml" value="REGISTRARSE">
+                            <f:param name="registro.xhtml" value="REGISTRARSE" />
+                        </p:link>
+                        <br></br>
+                        <br></br>
+                        <p:link outcome="recuperarContrasenna.xhtml" value="Recuperar contraseña">
+                            <f:param name="recuperarContrasenna.xhtml" value="Recuperar contraseña" />
+                        </p:link>
+                        <br></br>
+                    </f:facet>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+
+    </h:body>
+    <script type="text/javascript">
+        //<![CDATA[
+        function manejarLogin(xhr, status, args) {
+           // alert('args.estaLogeado ' + args.estaLogeado);
+           // alert('args.nombre ' + args.nombre);
+
+            if (args.estaLogeado) {
+                //alert('Entro a la funcion en Javascript de prueba para hacer una pausa antes de ingresar');
+                setTimeout(function () {
+                    window.location = args.view;
+                }, 1500);
+            }
+        }
+        //]]>
+    </script>
+</html>

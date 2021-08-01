@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Foro</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Foro" style="width:1000px" >
+            <h:form>
+
+                <h:outputText value="#{preguntaController.cargarPreguntas()}"/>
+                <p:dataTable value="#{preguntaController.listaPreguntasData}" var="laPregunta" id="lasPreguntas" emptyMessage="No existen registros">
+                    <p:column headerText="Info">
+                        <h:outputText value="#{laPregunta.info}" />
+                    </p:column>
+                    <br></br>
+                    <br></br>
+                    <p:column headerText="Fecha">
+                        <h:outputText value="#{laPregunta.fecha}" >
+                            <f:convertDateTime type="date" pattern="dd-MM-yyyy"/>
+                        </h:outputText>
+                    </p:column>
+                    <br></br>   
+                    <p:column headerText="Respuestas">
+                        <p:dataTable value="#{respuestaController.lstRespuestas}" var="laRespuesta" id="lasRespuestas" emptyMessage="No existen registros">
+                            <p:column headerText="Fecha">
+                                <h:outputText value="#{laRespuesta.fecha}" />
+                            </p:column>
+                            <p:column headerText="Contenido">
+                                <h:outputText value="#{laRespuesta.info}" />
+                            </p:column>
+                            
+                        </p:dataTable>
+                        <p:commandButton id="respuestaButton" style="position:relative; margin-right: 50px;" value="Agregar respuesta" onclick="PF('respuesta').show();"/>
+
+                    </p:column>
+
+                </p:dataTable>
+                <p:commandButton id="preguntaButton" style="position:relative; margin-right: 50px;" value="Hacer una nueva pregunta" onclick="PF('pregunta').show();"/>
+
+                <p:dialog id="Pregunta" header="Pregunta" widgetVar="pregunta" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+                    <p:outputPanel id="PreguntaAHacer" style="text-align:center;">
+                        <p:panelGrid  columns="2"  columnClasses="label,value" >
+                            <h:outputText value="Cual es su pregunta:" />
+                            <p:inputText value="#{preguntaController.pregunta.info}" id="Contenido" />
+                            <h:outputText value="Tags:" />
+                            <h:panelGrid columns="2">
+                                <p:outputLabel for="chips" value="#{preguntaController.pregunta.tags}" id="Tags" />
+                                <p:chips id="chips" />
+                            </h:panelGrid> 
+
+                        </p:panelGrid>
+                        <p:commandButton id="RealizarPregunta" value="Realizar pregunta" action="#{preguntaController.agregarPreg()}" oncomplete="PF('pregunta').hide();" update="lasPreguntas"/>
+                    </p:outputPanel>
+                </p:dialog>
+
+
+                
+                <!--Agregar respuestas-->
+                    <p:dialog id="RealizarRespuesta" header="Respuesta" widgetVar="respuesta" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
+                        <p:outputPanel id="RespuestaAHacer" style="text-align:center;">
+                            <p:panelGrid  columns="2"  columnClasses="label,value" >
+                                <h:outputText value="Ingrese su respuesta:" />
+                                <p:inputText value="#{respuestaController.respuesta.info}" id="infoRespuesta" />
+                            </p:panelGrid>
+                            <p:commandButton id="realizarrespuesta" value="Publicar respuesta" action="#{respuestaController.RealizarRespuesta()}" oncomplete="PF('respuesta').hide();" update="lasPreguntas"/>
+
+                        </p:outputPanel>
+                    </p:dialog>
+                
+                
+                
+<p:commandButton id="VolverButton" value="Regresar al menu" actionListener="bienvenida.xhtml"/>
+            </h:form>
+        </p:panel>
+    </h:body>
+</html>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="bienvenida.xhtml" x="723" y="43" zoom="true"/>
+        <Node id="index.xhtml" x="382" y="41" zoom="true"/>
+        <Node id="perfil.xhtml" x="769" y="121" zoom="true"/>
+        <Node id="biblioteca.xhtml" x="735" y="220" zoom="true"/>
+        <Node id="registro.xhtml" x="47" y="23" zoom="true"/>
+        <Node id="foroAnny_2.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="bibliotecaAlexis.xhtml" x="702" y="261" zoom="true"/>
+        <Node id="wiki.xhtml" x="59" y="202" zoom="true"/>
+        <Node id="blog.xhtml" x="62" y="286" zoom="true"/>
+        <Node id="recuperarContrasenna.xhtml" x="556" y="332" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

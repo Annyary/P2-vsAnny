@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Wiki</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Wiki" style="width:1000px" >
+            <h:form>    
+
+                <br>
+
+
+                    <h:outputText value="#{wikiController.cargarContenidos()}" />
+                    <p:dataTable value="#{wikiController.lstContenidosWiki}" var="elContenido" id="losContenidos" emptyMessage="No existen registros">
+                        <p:column headerText="Tema">
+                            <h:outputText value="#{elContenido.nombreTema}" />
+                        </p:column>
+                        <p:column headerText="Contenido">
+                            <h:outputText value="#{elContenido.descripcionTema}" />
+                        </p:column>
+                    </p:dataTable>
+                </br>
+                <h:panelGrid columns="1" cellpadding="5">
+                    <p:commandButton value="Agregar nuevo tema" type="button" onclick="PF('dlg3').show();" /> 
+
+                    <p:dialog header="Nuevo tema para wiki" widgetVar="dlg3" showEffect="explode" hideEffect="bounce" height="100">
+                        <h:outputText value="Nombre del tema:" />
+                        <p:inputText value="#{wikiController.wiki.nombreTema}" id="tema" />
+                        <h:outputText value="Contenido:" />
+                        <p:inputText value="#{wikiController.wiki.descripcionTema}" id="contenido" />
+                        <p:commandButton id="realizarPublicacion" value="Publicar tema" actionListener="#{wikiController.agregarTema()}" oncomplete="PF('dlg3').hide();" update="losContenidos"/>
+                    </p:dialog>
+
+                    <p:commandButton id="VolverButton" value="Volver al menu" actionListener="bienvenida.xhtml" styleClass="botonVolverMenu" style="position:relative; margin-right: 50px;"/>
+                </h:panelGrid>   
+            </h:form>
+
+
+
+        </p:panel>
+    </h:body>
+</html>
+

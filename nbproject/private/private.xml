@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/model/Pregunta.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/bienvenida.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/preguntasForoAnn.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/biblioteca.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/model/Comentario.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/WikiController.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/service/BibliotecaDao.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/nuevaContrasenna.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/bibliotecaAlexis.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/service/PreguntaDao.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/foroAnny_2.xhtml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/service/RespuestaDao.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/BlogController.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/PreguntaController.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/service/WikiDao.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/model/Respuesta.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/LoginController.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/model/Blog.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/service/BlogDao.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/BibliotecaController.java</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Users/Anny%20Mora/Desktop/Sprint1Proycto2/src/java/com/cci/controller/RespuestaController.java</file>
+        </group>
+    </open-files>
+</project-private>

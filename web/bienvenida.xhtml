@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Página principal</title>
+    </h:head>
+    <h:body   style="src: img/ulatinaLogo.jpg" >
+
+        <h:form>
+            <p:panel header="Bienvenido al sistema" style="width:1000px">
+
+                <p:tabMenu activeIndex="#{param.i}">
+                    <p:menuitem value="Perfil" outcome="perfil.xhtml">
+                        <f:param name="i" value="0" />
+                    </p:menuitem>
+                    <p:menuitem value="Biblioteca" outcome="biblioteca.xhtml">
+                        <f:param name="i" value="1" />
+                    </p:menuitem>
+                    <p:menuitem value="Blog" outcome="blog.xhtml">
+                        <f:param name="i" value="2" />
+                    </p:menuitem>
+                    <p:menuitem value="Wiki" outcome="wiki.xhtml">
+                        <f:param name="i" value="3" />
+                    </p:menuitem>
+                    <p:menuitem value="Foro" outcome="foroAnny_2.xhtml">
+                        <f:param name="i" value="4" />
+                    </p:menuitem>
+           
+                </p:tabMenu>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <p:commandButton id="VolverButton" value="Salir " action="#{loginController.salir}" />
+ 
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+
